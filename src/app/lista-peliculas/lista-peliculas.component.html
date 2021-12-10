@@ -1,0 +1,318 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div ng-init="onLoadInit()">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col mt-3 mb-3">
+              <nav
+                class="navbar navbar-light bg-transparent static-nav col-sm-12"
+              >
+                <div class="row">
+                  <div class="col">
+                    <div class="col-sm-6 float-start">
+                      <a class="navbar-brand text-white">
+                        <img
+                          src="../../assets/images/usuario.png"
+                          height="38"
+                        />
+                        {{ nombreUsuario }}
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="col-sm-6 float-end">
+                      <form class="d-flex">
+                        <div id="card-shop" >
+                          <i
+                            class="gg-shopping-cart"
+                            data-bs-toggle="modal"
+                            data-bs-target="#listaPedidos" (click)="onVerCarrito()"
+                          ></i
+                          ><link
+                            href="https://css.gg/shopping-cart.css"
+                            rel="stylesheet"
+                          />
+                        </div>
+                        <span class="count-shop">{{ pedido }}</span>
+                        <button
+                          class="btn btn-outline-warning"
+                          type="submit"
+                          (click)="onCerrarSesion()"
+                          id="btnCerrarSesionDesktop"
+                        >
+                          Cerrar Sesion
+                        </button>
+                        <button
+                          class="btn btn-outline-warning col-sm-2"
+                          type="submit"
+                          (click)="onCerrarSesion()"
+                          id="btnCerrarSesion"
+                        >
+                          <i class="gg-log-out"></i
+                          ><link
+                            href="https://css.gg/log-out.css"
+                            rel="stylesheet"
+                          />
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div
+                id="carouselExampleDark"
+                class="carousel carousel-dark slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img
+                      src="https://i1.wp.com/codigoespagueti.com/wp-content/uploads/2021/11/Poster-de-Spider-Man_-No-Way-Home-confirma-la-aparicion-del-Duende-Verde-de-William-Dafoe.jpg?fit=1280%2C720&quality=80&ssl=1"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>
+                        Some representative placeholder content for the first
+                        slide.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img
+                      src="https://talenthouse-res.cloudinary.com/image/upload/c_limit,f_auto,fl_progressive,h_1280,w_1280/v1535603253/user-918392/submissions/vzu1p1ql4wvx5lgxr8ok.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second slide label</h5>
+                      <p>
+                        Some representative placeholder content for the second
+                        slide.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/799731590f8faabd42096fb0cce122740e5d73327b1d8cf6b07af5d8640db135._UR1920,1080_RI_.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>
+                        Some representative placeholder content for the third
+                        slide.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-3 g-3" *ngFor="let peli of listaPelis">
+              <div
+                class="card bg-secondary bg-opacity-25 text-white mb-3"
+                style="width: 100%"
+              >
+                <img src="{{ peli.imagen }}" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title" style="height: 50px">
+                    {{ peli.nombre }}
+                  </h5>
+                  <p class="card-text a">
+                    {{ peli.detalle }}
+                  </p>
+                </div>
+
+                <ul class="list-group list-group-flush gray-600">
+                  <li
+                    class="
+                      list-group-item
+                      bg-secondary bg-opacity-25
+                      text-white
+                    "
+                  >
+                    <b>Categoria: </b>{{ peli.clasificacion }}
+                  </li>
+                  <li
+                    class="
+                      list-group-item
+                      bg-secondary bg-opacity-25
+                      text-white
+                    "
+                  >
+                    <b>Creado: </b>{{ peli.director }}
+                  </li>
+                  <li
+                    class="
+                      list-group-item
+                      bg-secondary bg-opacity-25
+                      text-white
+                    "
+                  >
+                    <b>Puntuación: </b>
+                  </li>
+                </ul>
+                <div class="card-body text-center">
+                  <button
+                    class="btn btn-outline-warning me-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                    (click)="onBuscar(peli.id)"
+                  >
+                    Más Info
+                  </button>
+                  <button
+                    class="btn btn-warning me-2"
+                    (click)="onAgregar(peli.id)"
+                  >
+                    + Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">
+          <b id="pTitulo"></b>
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div id="imgModal"><img id="modalImagen" class="img-thumbnail" /></div>
+        <p id="modalDetalle"></p>
+        <p id="modalDirector"></p>
+        <p id="modalClasificacion"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="listaPedidos"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="listaPedidosLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Imagen</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Costo</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let carrito of carrito">
+          <tr>
+            <td><img src="{{carrito.imagen}}" width="50px"></td>
+            <td>{{ carrito.nombre }}</td>
+            <td>{{ carrito.costo }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div>
+        <p>Costo total: {{costoTotal}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="onComprar()">Comprar</button>
+      </div>
+    </div>
+  </div>
+</div>

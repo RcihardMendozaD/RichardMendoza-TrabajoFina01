@@ -1,0 +1,29 @@
+
+
+@media (max-width:3000px) {
+    #logotipo{
+        position: absolute;
+        top: 20%;
+        left: 10%;
+    }
+    .fondo-logo{
+        background-color: #ffc107;
+        width: 30%;
+        height: 40%;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+
+
+    }
+    
+}
+@media (max-width:464px) {
+    
+    #logotipo{
+        position: absolute;
+        top: 20%;
+        left: 10px;
+    }
+}
+

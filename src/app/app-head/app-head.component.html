@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand bg-black bg-opacity-1">
+  <div class="container-fluid">
+    <a [routerLink]="['/inicio']" >
+      <img src="../../assets/images/logocine.png" width="50" />
+    </a>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </ul>
+
+      <form class="d-flex">
+        <a class="btn btn-outline-warning me-2" type="submit" [routerLink]="['/registrarse']" routerLinkActive="router-link-active" >Registrarse</a>
+        <a class="btn btn-warning" type="submit"  [routerLink]="['/iniciarSesion']">Iniciar Sesion</a>
+      </form>
+    </div>
+  </div>
+</nav>

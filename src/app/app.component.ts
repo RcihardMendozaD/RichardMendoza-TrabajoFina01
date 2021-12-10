@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+import  jsPeliculas  from 'src/assets/json/listaPelis.json'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'servicio-streaming';
+
+  listaPelis: any = jsPeliculas;
 }

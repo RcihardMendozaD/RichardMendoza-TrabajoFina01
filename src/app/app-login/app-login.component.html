@@ -1,0 +1,147 @@
+<div class="container" [hidden]="!visualizarRegistro">
+  <div class="row">
+    <div id="img-left" class="col d-none d-lg-block">
+<img src="https://st.depositphotos.com/1817276/1694/i/600/depositphotos_16944355-stock-photo-abstract-multimedia-background-made-by.jpg">
+    </div>  
+    <div class="col">
+      <h1 class="text-white text-center mt-4 mb-4">Registar Usuario</h1>
+      <form class="row g-3 needs-validation" [formGroup]="usuario">
+        <div class="col-sm-6">
+          <label for="valNombre" class="form-label bg-opacity-25 text-white">Nombres</label>
+          <input
+            type="text"
+            class="form-control"
+            id="valNombre"
+            placeholder="Nombres"
+            formControlName="nombre"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-sm-6">
+          <label for="valApellidos" class="form-label bg-opacity-25 text-white">Apellidos</label>
+          <input
+            type="text"
+            class="form-control"
+            id="valApellidos"
+            placeholder="Apellidos"
+            formControlName="apellidos"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-sm-12">
+
+          <label for="valCorreo" class="text-white form-label">Correo</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend69">@</span>
+            <input type="text" class="form-control" id="valCorreo" aria-describedby="inputGroupPrepend69 valCorreoFeedback" placeholder="email@gmail.com"
+            formControlName="correo" required>
+            <div id="valCorreoFeedback" class="invalid-feedback" *ngIf="!usuario.controls.correo.valid && usuario.controls.correo.touched">
+              Please choose a username.
+            </div>
+          </div>
+
+          
+        </div>
+        <div class="col-sm-12">
+          <label for="valGenero" class="form-label bg-opacity-25 text-white">Genero:</label>
+          <select
+            class="form-select"
+            id="valGenero"
+            formControlName="genero"
+            placeholder="Seleccionar..."
+            required
+          >
+            <option selected disabled value="">Seleccionar...</option>
+            <option>Femenino</option>
+            <option>Masculino</option>
+            <option>Otros</option>
+          </select>
+          <div class="invalid-feedback">Please select a valid state.</div>
+        </div>
+        
+        <div class="col-sm-6">
+          <label for="valClave" class="col-sm-6 col-form-label bg-opacity-25 text-white">Password</label>
+          <div class="col-md-12">
+            <input
+              type="password"
+              class="form-control"
+              id="valClave"
+              formControlName="clave"
+            />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <label for="valClaveRepetir" class="col-sm-6 col-form-label bg-opacity-25 text-white"
+            >Repetir Password</label
+          >
+          <div class="col-md-12">
+            <input
+              type="password"
+              class="form-control"
+              id="valClaveRepetir"
+              formControlName="claveRepetir"
+            />
+          </div>
+        </div>
+      </form>
+      <button class="btn btn-primary col-sm-12 mt-4 mb-4" (click)="onRegistrar()" [disabled]="!usuario.valid" data-bs-toggle="modal" data-bs-target="#exampleModal"  >Registrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false" >
+  <div class="modal-dialog alert alert-success">
+    <div  >
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{mensajeTituloModal}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" [routerLink]="['/iniciarSesion']"></button>
+      </div>
+      <div class="modal-body">
+        {{mensajeDetalleModal}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" [routerLink]="['/iniciarSesion']">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container" [hidden]="visualizarRegistro">
+  <form class="row" [formGroup]="login">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+      <div class="col-md-12 pb-3 ">
+        <label for="valUsuario" class="form-label bg-opacity-25 text-white">Correo ó Usuario</label>
+        <input
+          type="text"
+          class="form-control"
+          id="valUsuario"
+          placeholder="Correo o Usuario"
+          formControlName="usrLogin"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-12 pb-5 ">
+        <label for="valClave" class="form-label bg-opacity-25 text-white">Clave</label>
+        <input
+          type="password"
+          class="form-control"
+          id="valClave"
+          placeholder="Clave"
+          formControlName="pasLogin"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <button class="btn btn-primary col-sm-12" (click)="onIngresar()">Ingresar</button>
+    </div>
+    <div class="col-sm-3"></div>
+  </form>
+</div>
+

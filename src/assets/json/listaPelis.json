@@ -1,0 +1,92 @@
+
+   [   {
+    "id": 1,
+    "nombre": "El faro",
+    "detalle": "Eddie Brock is still struggling to coexist with the shape-shifting extraterrestrial Venom. When deranged serial killer Cletus Kasady also becomes host to an alien symbiote, Brock and Venom must put aside their differences to stop his reign of terror.",
+    "director": "Robert Eggers",
+    "clasificacion": "Drama",
+    "imagen":"https://as01.epimg.net/meristation/imagenes/2019/07/23/noticias/1563875845_483847_1563875906_noticia_normal_recorte1.jpg",
+    "costo":30
+  },
+  {
+    "id": 2,
+    "nombre": "1917",
+    "detalle": "Eddie Brock is still struggling to coexist with the shape-shifting extraterrestrial Venom. When deranged serial killer Cletus Kasady also becomes host to an alien symbiote, Brock and Venom must put aside their differences to stop his reign of terror.",
+    "director": "Tarantino",
+    "clasificacion": "Acción",
+    "imagen":"https://as01.epimg.net/meristation/imagenes/2019/07/23/noticias/1563875845_483847_1563875906_noticia_normal_recorte1.jpg",
+    "costo":30
+  },
+  {
+    "id": 3,
+    "nombre": "Todo Sobre Mi Madre",
+    "detalle": "Eddie Brock is still struggling to coexist with the shape-shifting extraterrestrial Venom. When deranged serial killer Cletus Kasady also becomes host to an alien symbiote, Brock and Venom must put aside their differences to stop his reign of terror.",
+    "director": "Almodobar",
+    "clasificacion": "Drama",
+    "imagen":"https://as01.epimg.net/meristation/imagenes/2019/07/23/noticias/1563875845_483847_1563875906_noticia_normal_recorte1.jpg",
+    "costo":30
+  },
+  {
+    "id": 4,
+    "nombre": "300",
+    "detalle": "Eddie Brock is still struggling to coexist with the shape-shifting extraterrestrial Venom. When deranged serial killer Cletus Kasady also becomes host to an alien symbiote, Brock and Venom must put aside their differences to stop his reign of terror.",
+    "director": "Zack Snyder",
+    "clasificacion": "Acción",
+    "imagen":"https://as01.epimg.net/meristation/imagenes/2019/07/23/noticias/1563875845_483847_1563875906_noticia_normal_recorte1.jpg",
+    "costo":30
+  },
+  {
+    "id": 5,
+    "nombre": "El silencio de los corderos",
+    "detalle": "Eddie Brock is still struggling to coexist with the shape-shifting extraterrestrial Venom. When deranged serial killer Cletus Kasady also becomes host to an alien symbiote, Brock and Venom must put aside their differences to stop his reign of terror.",
+    "director": "Jonathan Demme",
+    "clasificacion": "Drama",
+    "imagen":"https://as01.epimg.net/meristation/imagenes/2019/07/23/noticias/1563875845_483847_1563875906_noticia_normal_recorte1.jpg",
+    "costo":303
+  },
+  {
+    "id": 6,
+    "nombre": "Forrest Gump",
+    "detalle": "Eddie Brock is still struggling to coexist with the shape-shifting extraterrestrial Venom. When deranged serial killer Cletus Kasady also becomes host to an alien symbiote, Brock and Venom must put aside their differences to stop his reign of terror.",
+    "director": "Robert Zemeckis",
+    "clasificacion": "Comedia",
+    "imagen":"https://as01.epimg.net/meristation/imagenes/2019/07/23/noticias/1563875845_483847_1563875906_noticia_normal_recorte1.jpg",
+    "costo":250
+  },
+  {
+    "id": 7,
+    "nombre": "Las Hurdes",
+    "detalle": "Eddie Brock is still struggling to coexist with the shape-shifting extraterrestrial Venom. When deranged serial killer Cletus Kasady also becomes host to an alien symbiote, Brock and Venom must put aside their differences to stop his reign of terror.",
+    "director": "Luis Buñuel",
+    "clasificacion": "Documental",
+    "imagen":"https://as01.epimg.net/meristation/imagenes/2019/07/23/noticias/1563875845_483847_1563875906_noticia_normal_recorte1.jpg",
+    "costo":178
+  },
+  {
+    "id": 8,
+    "nombre": "Las Hurdes",
+    "detalle": "Eddie Brock is still struggling to coexist with the shape-shifting extraterrestrial Venom. When deranged serial killer Cletus Kasady also becomes host to an alien symbiote, Brock and Venom must put aside their differences to stop his reign of terror.",
+    "director": "Luis Buñuel",
+    "clasificacion": "Documental",
+    "imagen":"https://as01.epimg.net/meristation/imagenes/2019/07/23/noticias/1563875845_483847_1563875906_noticia_normal_recorte1.jpg",
+    "costo":800
+  },
+  {
+    "id": 9,
+    "nombre": "Las Hurdes",
+    "detalle": "Eddie Brock is still struggling to coexist with the shape-shifting extraterrestrial Venom. When deranged serial killer Cletus Kasady also becomes host to an alien symbiote, Brock and Venom must put aside their differences to stop his reign of terror.",
+    "director": "Luis Buñuel",
+    "clasificacion": "Documental",
+    "imagen":"https://as01.epimg.net/meristation/imagenes/2019/07/23/noticias/1563875845_483847_1563875906_noticia_normal_recorte1.jpg",
+    "costo":120
+  },
+  {
+    "id": 10,
+    "nombre": "Las Hurdes",
+    "detalle": "Eddie Brock is still struggling to coexist with the shape-shifting extraterrestrial Venom. When deranged serial killer Cletus Kasady also becomes host to an alien symbiote, Brock and Venom must put aside their differences to stop his reign of terror.",
+    "director": "Luis Buñuel",
+    "clasificacion": "Documental",
+    "imagen":"https://as01.epimg.net/meristation/imagenes/2019/07/23/noticias/1563875845_483847_1563875906_noticia_normal_recorte1.jpg",
+    "costo":200
+  }
+]
