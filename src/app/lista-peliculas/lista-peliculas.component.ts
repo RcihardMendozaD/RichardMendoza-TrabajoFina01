@@ -44,7 +44,7 @@ export class ListaPeliculasComponent implements OnInit {
     director.innerHTML=this.listaPelis[num-1].director;
     detalle.innerHTML=this.listaPelis[num-1].detalle;
     clasificacion.innerHTML=this.listaPelis[num-1].clasificacion;
-    costo.innerHTML=this.listaPelis[num-1].clasificacion;
+    costo.innerHTML=this.listaPelis[num-1].costo;
 
   }
   onAgregar(num:number){

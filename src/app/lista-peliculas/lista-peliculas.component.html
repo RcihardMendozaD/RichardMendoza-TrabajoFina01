@@ -172,7 +172,7 @@
                 class="card bg-secondary bg-opacity-25 text-white mb-3"
                 style="width: 100%"
               >
-                <img src="{{ peli.imagen }}" class="card-img-top" alt="..." />
+                <img src="{{ peli.imagen }}" class="card-img-top" alt="..." class="imgLista"/>
                 <div class="card-body">
                   <h5 class="card-title" style="height: 50px">
                     {{ peli.nombre }}
@@ -260,16 +260,18 @@
         ></button>
       </div>
       <div class="modal-body">
-        <div id="imgModal"><img id="modalImagen" class="img-thumbnail" /></div>
-        <p id="modalDetalle"></p>
-        <p id="modalDirector"></p>
-        <p id="modalClasificacion"></p>
+        <div id="imgModal">
+        <img id="modalImagen" class="img-thumbnail" height="200" width="800"></div>
+        <br>
+        <b>Descripción: </b> <a id="modalDetalle"></a><br>
+        <b>Director:</b> <a id="modalDirector"></a><br>
+        <b>Categoria:</b> <a id="modalClasificacion"></a><br>
+        <b>Costo:</b> $ <a id="costo">$</a>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Close
         </button>
-        <button type="button" class="btn btn-primary">Understood</button>
       </div>
     </div>
   </div>
@@ -297,7 +299,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let carrito of carrito">
-            <td><img src="{{carrito.imagen}}" width="50px"></td>
+            <td><img src="{{carrito.imagen}}" width="100px"></td>
             <td>{{ carrito.nombre }}</td>
             <td>$ {{ carrito.costo }}</td>
           </tr>

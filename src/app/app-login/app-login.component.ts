@@ -72,7 +72,6 @@ datosJson = [{
         }else{
           this.datosJson = JSON.parse(""+localStorage.getItem("ListaUsuarios"));
           localStorage.setItem("ListaUsuarios",JSON.stringify((this.datosJson?.concat(this.datosUsiario))));
-
         }
 
     }else{
@@ -83,6 +82,13 @@ datosJson = [{
     }
     
   }
+
+  onLoadIniciarSesion(){
+    console.log("ddd");
+    window.open("http://localhost:4200/iniciarSesion","_self");
+
+  }
+
 
   crearUsuario(){
     let numeroRandom = Math.trunc(Math.random()*1000)

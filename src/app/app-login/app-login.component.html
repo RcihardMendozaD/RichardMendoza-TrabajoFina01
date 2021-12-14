@@ -66,6 +66,7 @@
           <div class="col-md-12">
             <input
               type="password"
+              placeholder="Ingresar clave"
               class="form-control"
               id="valClave"
               formControlName="clave"
@@ -79,6 +80,8 @@
           <div class="col-md-12">
             <input
               type="password"
+              placeholder="Ingresar clave"
+
               class="form-control"
               id="valClaveRepetir"
               formControlName="claveRepetir"
@@ -92,18 +95,18 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false" >
-  <div class="modal-dialog alert {{typeAlert}}">
-    <div  >
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">{{mensajeTituloModal}}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" [routerLink]="['/iniciarSesion']"></button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false" (click)="onLoadIniciarSesion()">
+  <div class="modal-dialog alert {{typeAlert}}"(click)="onLoadIniciarSesion()">
+    <div  (click)="onLoadIniciarSesion()">
+      <div class="modal-header"(click)="onLoadIniciarSesion()">
+        <h5 class="modal-title" id="exampleModalLabel"(click)="onLoadIniciarSesion()">{{mensajeTituloModal}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="onLoadIniciarSesion()"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body"(click)="onLoadIniciarSesion()">
         {{mensajeDetalleModal}}
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" [routerLink]="['/iniciarSesion']">Close</button>
+      <div class="modal-footer"(click)="onLoadIniciarSesion()">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onLoadIniciarSesion()">Close</button>
       </div>
     </div>
   </div>
