@@ -23,6 +23,8 @@ export class AppLoginComponent implements OnInit {
     pasLogin: new FormControl('', Validators.required),
   })
 
+  typeAlert="";
+
   datosUsiario=[{
                 //id:,
                 nombre:String,
@@ -59,6 +61,7 @@ datosJson = [{
          usr:randomUsr,
              });
 
+        this.typeAlert="alert-success";
         this.mensajeTituloModal = "Bienvenido a la familia Movie - Flow"
         this.mensajeDetalleModal = "Hola " + this.usuario.get("nombre")?.value + " tu registro fue exitoso, ahora podras ingresar con tu usuario " + randomUsr + " ó  con tu correo electronico " + this.usuario.get("correo")?.value;
         this.visualizarRegistro = false;
@@ -74,6 +77,7 @@ datosJson = [{
 
     }else{
       console.log("error");
+      this.typeAlert="alert-danger";
       this.mensajeTituloModal = "Error"
       this.mensajeDetalleModal = "Se detecto un error en sus credenciales, por favor volver a intentarlo."
     }

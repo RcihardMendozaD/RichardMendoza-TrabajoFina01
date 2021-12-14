@@ -93,7 +93,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false" >
-  <div class="modal-dialog alert alert-success">
+  <div class="modal-dialog alert {{typeAlert}}">
     <div  >
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">{{mensajeTituloModal}}</h5>
@@ -139,9 +139,26 @@
         />
         <div class="valid-feedback">Looks good!</div>
       </div>
-      <button class="btn btn-primary col-sm-12" (click)="onIngresar()">Ingresar</button>
+      <button class="btn btn-primary col-sm-12" (click)="onIngresar()" data-bs-toggle="modal" data-bs-target="#exampleLogin" >Ingresar</button>
     </div>
     <div class="col-sm-3"></div>
   </form>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleLogin" tabindex="-1" aria-labelledby="exampleLoginLabel" aria-hidden="false" >
+  <div class="modal-dialog alert alert-danger">
+    <div  >
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleLoginLabel">Error</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" [routerLink]="['/iniciarSesion']"></button>
+      </div>
+      <div class="modal-body">
+        Validar usuario y clave.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" [routerLink]="['/iniciarSesion']">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -66,13 +66,14 @@ export class ListaPeliculasComponent implements OnInit {
       this.costoTotal = this.costoTotal+this.listaPelis[num-1].costo;
       }
       
-    
     console.log(this.carrito.length)
-
+    document.getElementsByClassName("table")[0].lastElementChild?.firstElementChild?.setAttribute("style","display:none !important;");
+    console.log("borro")
     
   }
   onVerCarrito(){
-    delete this.carrito[0];
+    //delete this.carrito[0];
+    document.getElementsByClassName("table")[0].lastElementChild?.firstElementChild?.setAttribute("style","display:none !important;");
   }
   onComprar(){
     this.carrito = [{
